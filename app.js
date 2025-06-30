@@ -47,7 +47,7 @@ const checkWinner = () => {
         count++;
     }
     });
-    if(count == 9 && flag !=1){
+    if(count == 9 && flag == 0){
         currPlayer=0;
         overlay();
     }
@@ -77,6 +77,7 @@ function highlightWin(combo) {
 })
 function startNewGame() {
       currPlayer = 1;
+      flag = 0;
       overlayText.style.display = 'none';
       gameDiv.classList.remove('blurred');
       boxes.forEach(box => {
